@@ -42,4 +42,8 @@ function send() {
     
     socket.emit('message', {type: 'message', message: message});
     document.getElementById('test').value = '';
+    document.getElementById('submitForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+    });
 }
+
