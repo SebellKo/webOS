@@ -1,9 +1,16 @@
+ul
+{
+  list-style: none;
+}
+
 #main {
     margin: auto;
     margin-top: 100px;
     border-radius: 20px;
-    background-color: lightblue;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.15);
     text-align: center;
+    border-radius: 5%;
     width: 500px;
     height: 800px;
   }
@@ -13,40 +20,70 @@
     height: 90%;
     width: 100%;
     overflow-y: auto;
+    flex-direction: column;
   }
   
   /* 접속 알림 */
   .connect {
     width: 90%;
     margin: auto;
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
     text-align: center;
     margin-top: 10px;
+    font-weight: bold;
   }
   
   /* 접속 종료 알림 */
   .disconnect {
     width: 90%;
     margin: auto;
-    background-color: indianred;
+    background-color: white;
     text-align: center;
     margin-top: 10px;
+    font-weight: bold;
   }
   
   /* 내가 보낸 메시지 */
   .me {
-    width: 90%;
-    margin: auto;
-    background-color: lemonchiffon;
-    border-radius: 5px;
-    margin-top: 10px;
+    background-color: rgba(0,198,255,0.7);
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2), 5px 7px 5px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    font-size: 20px;
+    margin: 10px 20px;
+    padding: 5px 5px;
+    word-break: break-all;
+    width: fit-content;
   }
   
   /* 상대방이 보낸 메시지 */
   .other {
-    width: 90%;
-    margin: auto;
     background-color: white;
-    border-radius: 5px;
-    margin-top: 10px;
+    box-shadow: 15px 15px 1px rgba(255, 255, 255, 0.2), -5px 10px 5px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    margin: 10px 20px;
+    font-size: 20px;
+    padding: 5px 5px;
+    word-break: break-all;
+    width: fit-content;
+  }
+
+  #submitForm
+  {
+    height: 100px;
+  }
+
+  #submitForm input
+  {
+    width: 70%;
+    height: 30%;
+  }
+
+  #submitForm button
+  {
+    width: 20%;
+    height: 30%;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(0, 120, 255, 0.9);
+    color: white;
   }

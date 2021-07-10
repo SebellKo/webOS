@@ -26,7 +26,7 @@ io.sockets.on('connection', function(socket) {
     socket.on('newUser', function(name) {
         console.log(name + ' join this group');
         socket.name = name;
-        io.sockets.emit('update', {type: 'connect', name: 'server', message: name + 'is connected' });
+        io.sockets.emit('update', {type: 'connect', name: 'server', message: name + ' is connected' });
 
     socket.on('message', function(data) {
         data.name = socket.name;
@@ -38,7 +38,7 @@ io.sockets.on('connection', function(socket) {
     socket.on('disconnect', function() {
         console.log(socket.name + ' lefted');
 
-        socket.broadcast.emit('updat', {type: 'disconnect', name: 'SEJONG', message: socket.name + 'lefted'});
+        socket.broadcast.emit('update', {type: 'disconnect', name: 'server', message: socket.name + ' lefted'});
     })
 });
 
